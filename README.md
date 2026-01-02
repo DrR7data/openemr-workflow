@@ -1,10 +1,10 @@
-# Para Trabajar con Openemt
+# Para Trabajar con Openemr
 
--  Este este proyecto se despleega en docker compose listo para trabajar y realizar registro de pacientes, el cual esta enlazado a base de datos MariaDB y administrado por PgAdmind.
+-  Este proyecto se despliega con docker-compose listo para trabajar y realizar registro de pacientes, el cual está enlazado a base de datos MariaDB y administrado por PgAdmind.
 
 - Este proyecto se despliega usando comandos desde el archivo Makefile, para usar el codigo deben asegurar que tienen instalado el programa make y por supuesto Docker para que se puedan instalar los programas. 
 - Una vez que tengan instalado el programa docker y make.
-- En Macbook pueden instalar brew desde la pagina oficial para administrar brew si es microsoft pueden instalar chocolate para poder correr los comandos. En microsoft checar que tenga algunos ajuste para uso de maquina virtual para que se pueda install docker.  Si ya tienen instalado un subsitetema de linux, se instala sin problemas.
+- En Macbook pueden instalar brew desde la pagina oficial para administrar brew, por otro lado, si usar microsoft pueden instalar chocolate para poder correr los comandos. En microsoft checar que tenga algunos ajustes para uso de maquina virtual para que se pueda install docker.  Si ya tienen instalado un subsistema de linux, se instala sin problemas.
 
 1. Instalar docker descargandolo desde la pagina oficial.
 - https://www-docker-com.translate.goog/products/docker-desktop/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
@@ -16,7 +16,7 @@ copiar y pegar lo siguiente en el terminal.
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ``` 
 
-3. Install make 
+3. Instalar programa make en macbook
 
 ```bash
     brew install make
@@ -29,8 +29,8 @@ copiar y pegar lo siguiente en el terminal.
 ```
 
 
-"Algo muy importante debe asegurarse de que estan en el directorio de trabajo donde esta el archivo docker-compose.yaml 
-En su computadora busquen terminal, el terminal en automatico los llevara al directorio home. Para saber en donde se encuentrar desde el terminal pueden poner "pwd" en el terminar y les diran en que directorio estan  "/workspaces/openemr-workflow"y puego ponen "ls" veran lo siguente:
+"Algo muy importante, deben asegurarse de que estan en el directorio de trabajo donde está el archivo docker-compose.yaml 
+En su computadora busquen terminal, el terminal en automático abre en el directorio home. Para saber en dónde se encuentran desde el terminal pueden poner "pwd" en el terminar y les diran en que directorio están  "/workspaces/openemr-workflow"y puego ponen "ls" y verán lo siguente:
 
 ```bash
     -rw-rw-rw- 1 codespace codespace  205 Jan  2 01:59 Makefile
@@ -44,7 +44,7 @@ este último comando les dirá qué archivo tienen en su directorio, deberían d
     ls
 ```
 
-Cuando se termine de instalar los programas, ponga en el terminal  docker ps y vera los contenedores corriendo y listo para usar. 
+Cuando se termine de instalar los programas, pongan en el terminal  "docker ps" y verá los contenedores corriendo y listo para usar. 
 ```bash
 docker ps 
 ```
