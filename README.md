@@ -13,19 +13,19 @@
 copiar y pegar lo siguiente en el terminal.
 
 ```bash 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ``` 
 
 3. Instalar programa make en macbook
 
 ```bash
-    brew install make
+brew install make
 ```
 
 4. Desde el terminar escribir los siguiente para install los programas del archivo docker compose. 
 
 ```bash
-    make up  # y en automático se instalan los contenedores. 
+make up  # y en automático se instalan los contenedores. 
 ```
 
 
@@ -41,8 +41,8 @@ En su computadora busquen terminal, el terminal en automático abre en el direct
 Este último comando les dirá qué archivo tienen en su directorio, deberían de visualizar los archivos Docker-file, README.md y Makefile como lo anterior:
 
 ```bash
-    pwd 
-    ls
+pwd 
+ls
 ```
 
 Cuando se termine de instalar los programas, pongan en el terminal  "docker ps" y verán los contenedores corriendo y listo para usar. 
@@ -56,8 +56,7 @@ Verán algo como lo siguiente.
 CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS          PORTS                                                                                NAMES
 b5383348bb37   openemr/openemr:7.0.2   "./openemr.sh"           31 minutes ago   Up 10 minutes   0.0.0.0:8200->80/tcp, [::]:8200->80/tcp, 0.0.0.0:8443->443/tcp, [::]:8443->443/tcp   openemr
 192749b7f028   phpmyadmin              "/docker-entrypoint.…"   31 minutes ago   Up 10 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp                                              pma-openemr
-112d4f23dea9   mariadb:10.11           "docker-entrypoint.s…"   31 minutes ago   Up 10 minutes   3306/tcp    `
-                mysql
+112d4f23dea9   mariadb:10.11           "docker-entrypoint.s…"   31 minutes ago   Up 10 minutes   3306/tcp   mysql
 ```
 
 Nos dará información del terminal que estan usando los contendores que tenemos instalado y listos para ser usados. 
