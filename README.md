@@ -68,3 +68,5 @@ A continuación entramos con nuestro usuario y contraseña que definimos en el a
 
 Algo importante que deben saber es que los puertos estan expuestos a nuestra red local, lo que quiere decir que se puede acceder con nuestro usuario desde una computadora que está conectado a una red local de internet, solo el administrador y el programa openemr. Se puede realizar ajustes de acuerdo a las necesidades. 
 
+Pagina Oficial [openemr](https://www.open-emr.org/)
+
