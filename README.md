@@ -29,26 +29,28 @@ copiar y pegar lo siguiente en el terminal.
 ```
 
 
-"Algo muy importante, deben asegurarse de que estan en el directorio de trabajo donde está el archivo docker-compose.yaml 
+5. "Algo muy importante, deben asegurarse de que estan en el directorio de trabajo donde está el archivo docker-compose.yaml 
 En su computadora busquen terminal, el terminal en automático abre en el directorio home. Para saber en dónde se encuentran desde el terminal pueden poner "pwd" en el terminar y les diran en que directorio están  "/workspaces/openemr-workflow"y puego ponen "ls" y verán lo siguente:
 
 ```bash
     -rw-rw-rw- 1 codespace codespace  205 Jan  2 01:59 Makefile
     -rw-rw-rw- 1 codespace root      1427 Jan  2 02:23 README.md
     -rw-rw-rw- 1 codespace codespace  912 Jan  2 01:52 docker-compose.yaml
-este último comando les dirá qué archivo tienen en su directorio, deberían de visualizar los archivos Docker-file, README.md y Makefile como lo anterio`
 ```
+
+Este último comando les dirá qué archivo tienen en su directorio, deberían de visualizar los archivos Docker-file, README.md y Makefile como lo anterior:
 
 ```bash
     pwd 
     ls
 ```
 
-Cuando se termine de instalar los programas, pongan en el terminal  "docker ps" y verá los contenedores corriendo y listo para usar. 
+Cuando se termine de instalar los programas, pongan en el terminal  "docker ps" y verán los contenedores corriendo y listo para usar. 
+
 ```bash
 docker ps 
 ```
-Verá algo como lo siguiente.
+Verán algo como lo siguiente.
 
 ```bash
 CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS          PORTS                                                                                NAMES
@@ -58,12 +60,12 @@ b5383348bb37   openemr/openemr:7.0.2   "./openemr.sh"           31 minutes ago  
                 mysql
 ```
 
-Nos dará informacion del terminla que estan usand los contendores que tenemos instalado y que ya se puede usar. 
-Ahora entramos al siguiente enlace desde nuestro navegador. http://localhost/8200 y veremos algo como lo siguiente
+Nos dará información del terminal que estan usando los contendores que tenemos instalado y listos para ser usados. 
+Ahora entramos al siguiente enlace desde nuestro navegador. http://localhost/8200 y veremos algo como lo siguiente:
 
 ![openemr](file/open.png)
 
-A continuar entramos con nuestro usuario y contraseña que definimos en el archivo docker-compose.yaml.
+A continuación entramos con nuestro usuario y contraseña que definimos en el archivo docker-compose.yaml.
 
-Algo importante que deben saber es que los puertos estan expuestos a nuestra red local, lo que quiere decir que se puede acceder con nuestro usuario desde una computadora que esta conectado a una red local de internet, solo el administrador y el programa openemr. Se pueden hacer ajustes de acuerdo a las necesidades. 
+Algo importante que deben saber es que los puertos estan expuestos a nuestra red local, lo que quiere decir que se puede acceder con nuestro usuario desde una computadora que está conectado a una red local de internet, solo el administrador y el programa openemr. Se puede realizar ajustes de acuerdo a las necesidades. 
 
