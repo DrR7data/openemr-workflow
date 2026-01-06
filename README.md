@@ -15,13 +15,23 @@ copiar y pegar lo siguiente en el terminal.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ``` 
 
-3. Instalar programa make en macbook
+3. Instalar programa make y git en macbook 
 
 ```bash
-brew install make
+brew install make git
 ```
 
-4. Desde el terminar escribir los siguiente para install los programas del archivo docker compose. 
+4. Desde el terminar escribir los siguiente para que se descarguen los archivos con git
+```bash
+git clone https://github.com/DrR7data/openemr-workflow.git
+cd openemr-workflow
+```
+una vez que esten dentro del directorio openemr-workflow, puede averiguar si estar en el directorio con 
+```bash
+pwd # para ver el nombre del directorio.
+ls # para ver los archivos 
+```
+para install los programas del archivo docker compose. 
 
 ```bash
 make up  # y en automático se instalan los contenedores. 
