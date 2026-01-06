@@ -1,12 +1,13 @@
 # Para Trabajar con Openemr
 -  Este proyecto se despliega con docker-compose listo para trabajar y realizar registro de pacientes, el cual está enlazado a base de datos MariaDB y administrado por PgAdmind.
 
-- Este proyecto se despliega usando comandos desde el archivo Makefile, para usar el codigo deben asegurar que tienen instalado el programa make y por supuesto Docker para que se puedan instalar los programas. 
+- Este proyecto se despliega usando comandos desde el archivo Makefile, para usar el codigo deben asegurar que tienen instalado el programa make y por supuesto Docker para que se puedan instalar los programas dentro de los contenedores. 
 - Una vez que tengan instalado el programa docker y make.
-- En Macbook pueden instalar brew desde la pagina oficial para administrar brew, por otro lado, si usar microsoft pueden instalar chocolate para poder correr los comandos. En microsoft checar que tenga algunos ajustes para uso de maquina virtual para que se pueda install docker.  Si ya tienen instalado un subsistema de linux, se instala sin problemas.
+- En Macbook pueden instalar brew desde la pagina oficial para administrar brew, por otro lado, si usan microsoft pueden instalar chocolate para poder correr los comandos. En microsoft, checar que tenga algunos ajustes para uso de maquina virtual para que se pueda install docker.  Si ya tienen instalado un subsistema de linux, se instala sin problemas.
 
-1. Instalar docker descargandolo desde la pagina oficial.
+1. Instalar docker descargandolo desde la pagina oficial:
 - https://www-docker-com.translate.goog/products/docker-desktop/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+
 2. Instalar make con brew. 
 - https://brew.sh/    
 copiar y pegar lo siguiente en el terminal.
@@ -21,7 +22,7 @@ copiar y pegar lo siguiente en el terminal.
 brew install make git
 ```
 
-4. Desde el terminar escribir los siguiente para que se descarguen los archivos con git
+4. Desde el terminal escribir los siguiente para que se descarguen los archivos con git
 ```bash
 git clone https://github.com/DrR7data/openemr-workflow.git
 cd openemr-workflow
@@ -31,13 +32,13 @@ una vez que esten dentro del directorio openemr-workflow, puede averiguar si est
 pwd # para ver el nombre del directorio.
 ls # para ver los archivos 
 ```
-para install los programas del archivo docker compose. 
+para install los programas del archivo docker compose pueden usar **make up** or escibiendo docker compose up -d, en lo personal prefiero usar el proegrama make que ejecuta los comando en el archivo Makefile, para probar lo que hace puede probarlo solo escirbiendo make en la linea de comandos y verás un mensaje "For Work With openemr" en la que se ejecuta el  primer comando header por defaul, pero ustedes pueden espesicar el comando que quierene ejecutar.
 
 ```bash
 make up  # y en automático se instalan los contenedores. 
 ```
-Depende de la velocidad de su internet, puede llevar un poco, porque se descargaran 2 programas con una carga total de aprox. 2 GB en total después de la descarga verán algo como lo siguiente:
-al realizar el sigueinte comando 
+Agregué -d al final de comando **docker compose up -d** para que para no se vean las lineas de codigo en la pantalla del temrinal y como se está instando cada capa, pero si gustan pueden quitar -d para visualizarlo.
+Depende de la velocidad de su internet, puede tomar un poco de tiempo, porque se descargaran 2 programas con una carga total de aprox. 2 GB en total, después de la descarga verán algo como lo siguiente al realizar el siguiente comando, 
 ```
     docker images
 ```

@@ -1,14 +1,14 @@
 header:
 	@echo "For Work With openemr"
-up:
-	docker compose up 
-down:
+up: # Para instalar los contenedores
+	docker compose up -d
+down: # para desinstalar los contenedores y los eliminar pero se conserva el volumen utilizado
 	docker compose down
-stop:
+stop: # Para para los contenedores
 	docker compose stop
-start:
+start: # para que inicien los contenedores usando el volumen asociado.
 	docker compose start
-exec:
+exec: # para ingresar al contenedor de mariadb
 	docker exec -it mysql bash
 hello:
 	@echo "All Right"
