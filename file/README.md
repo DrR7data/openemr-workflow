@@ -1,4 +1,5 @@
 # Para Trabajar con Openemr
+
 -  Este proyecto se despliega con docker-compose listo para trabajar y realizar registro de pacientes, el cual está enlazado a base de datos MariaDB y administrado por PgAdmind.
 
 - Este proyecto se despliega usando comandos desde el archivo Makefile, para usar el codigo deben asegurar que tienen instalado el programa make y por supuesto Docker para que se puedan instalar los programas. 
@@ -72,13 +73,14 @@ docker ps
 Verán algo como lo siguiente.
 
 ```bash
-CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS                    PORTS                                                                          NAMES
-a3ede1951b36   openemr/openemr:7.0.4   "./openemr.sh"           16 minutes ago   Up 16 minutes (healthy)   0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp   openemr-workflow-openemr-1
-ec382c976549   mariadb:11.8            "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes (healthy)   3306/tcp                                                                       openemr-workflow-mysql-1
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS          PORTS                                                                                NAMES
+b5383348bb37   openemr/openemr:7.0.2   "./openemr.sh"           31 minutes ago   Up 10 minutes   0.0.0.0:8200->80/tcp, [::]:8200->80/tcp, 0.0.0.0:8443->443/tcp, [::]:8443->443/tcp   openemr
+192749b7f028   phpmyadmin              "/docker-entrypoint.…"   31 minutes ago   Up 10 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp                                              pma-openemr
+112d4f23dea9   mariadb:10.11           "docker-entrypoint.s…"   31 minutes ago   Up 10 minutes   3306/tcp   mysql
 ```
 
 Nos dará información del terminal que estan usando los contendores que tenemos instalado y listos para ser usados. 
-Ahora entramos al siguiente enlace desde nuestro navegador. http://localhost/80 y veremos algo como lo siguiente:
+Ahora entramos al siguiente enlace desde nuestro navegador. http://localhost/8200 y veremos algo como lo siguiente:
 
 ![openemr](file/open7-4.png)
 
@@ -88,21 +90,3 @@ Algo importante que deben saber es que los puertos estan expuestos a nuestra red
 
 Pagina Oficial [openemr](https://www.open-emr.org/)
 
-## Para anaddir a un paciente:
-![openemr](file/new-patient.png)
-## Dashboard del paciente
-![openemr](file/dashboard.png)
-
-Y si entramos a la base de datos veremos los siguiente: 
-```bash
-mariadb -u root -p #Ponemos la contraseña
-show databases;
-use openemr;
-select * from patient_data; #Veremos todas las columnas de la tabla 
-select id, pubpid, fname, mname, lname, city, DOB, date  from patient_data;
-
-```
-Veremos que nuestro paciente ya está registrado en nuestra base de datos MariaDB.
-
-## Dashboard del paciente
-![openemr](file/database.png)
