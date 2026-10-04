@@ -6,6 +6,7 @@
 - En Macbook pueden instalar brew desde la pagina oficial para administrar brew, por otro lado, si usan microsoft pueden instalar chocolate para poder correr los comandos. En microsoft, checar que tenga algunos ajustes para uso de maquina virtual para que se pueda install docker.  Si ya tienen instalado un subsistema de linux, se instala sin problemas.
 
 1. Instalar docker descargandolo desde la pagina oficial:
+
 - https://www-docker-com.translate.goog/products/docker-desktop/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
 
 2. Instalar make con brew. 
@@ -91,7 +92,7 @@ ec382c976549   mariadb:11.8            "docker-entrypoint.s…"   16 minutes ago
 Nos dará información del terminal que estan usando los contendores que tenemos instalado y listos para ser usados. 
 Ahora entramos al siguiente enlace desde nuestro navegador. http://localhost/80 y veremos algo como lo siguiente:
 
-![openemr](file/open7-4.png)
+![openemr](docs/open7-4.png)
 
 A continuación entramos con nuestro usuario y contraseña que definimos en el archivo docker-compose.yaml.
 
@@ -100,9 +101,9 @@ Algo importante que deben saber es que los puertos estan expuestos a nuestra red
 Pagina Oficial [openemr](https://www.open-emr.org/)
 
 ## Para anaddir a un paciente:
-![openemr](file/new-patient.png)
+![openemr](docs/new-patient.png)
 ## Dashboard del paciente
-![openemr](file/dashboard.png)
+![openemr](docs/dashboard.png)
 
 Y si entramos a la base de datos veremos los siguiente: 
 ```bash
@@ -117,4 +118,4 @@ select id, pubpid, fname, mname, lname, city, DOB, date  from patient_data;
 Veremos que nuestro paciente ya está registrado en nuestra base de datos MariaDB.
 
 ## Dashboard del paciente
-![openemr](file/database.png)
+![openemr](docs/database.png)
