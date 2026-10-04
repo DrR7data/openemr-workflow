@@ -1,4 +1,4 @@
-# Para Trabajar con Openemr
+# Para Trabajar con Openemr version 8.3.0
 -  Este proyecto se despliega con docker-compose listo para trabajar y realizar registro de pacientes, el cual está enlazado a base de datos MariaDB y administrado por PgAdmind.
 
 - Este proyecto se despliega usando comandos desde el archivo Makefile, para usar el codigo deben asegurar que tienen instalado el programa make y por supuesto Docker para que se puedan instalar los programas dentro de los contenedores. 
@@ -46,14 +46,14 @@ Depende de la velocidad de su internet, puede tomar un poco de tiempo, porque se
 ```bash
 
 REPOSITORY        TAG       IMAGE ID       CREATED         SIZE
-openemr/openemr   7.0.4     d7f15a1bae87   12 days ago     1.62GB
+openemr/openemr   8.3.0     d7f15a1bae87   12 days ago     1.62GB
 mariadb           11.8      f57b654bf058   7 weeks ago     334MB
 
 ```
 Si gustan pueden descargar programa por separado antes de correr el archivo docker-compose.yml con los sigueintes comandos
 
 ```bash
-docker pull openemr/openemr:7.0.4 
+docker pull openemr/openemr:8.3.0 
 docker pull mariadb:11.8  
 
 ```
@@ -84,7 +84,7 @@ Verán algo como lo siguiente.
 
 ```bash
 CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS                    PORTS                                                                          NAMES
-a3ede1951b36   openemr/openemr:7.0.4   "./openemr.sh"           16 minutes ago   Up 16 minutes (healthy)   0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp   openemr-workflow-openemr-1
+a3ede1951b36   openemr/openemr:8.3.0   "./openemr.sh"           16 minutes ago   Up 16 minutes (healthy)   0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp   openemr-workflow-openemr-1
 ec382c976549   mariadb:11.8            "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes (healthy)   3306/tcp                                                                       openemr-workflow-mysql-1
 ```
 
@@ -106,6 +106,7 @@ Pagina Oficial [openemr](https://www.open-emr.org/)
 
 Y si entramos a la base de datos veremos los siguiente: 
 ```bash
+docker exec -it mysql bash
 mariadb -u root -p #Ponemos la contraseña
 show databases;
 use openemr;
